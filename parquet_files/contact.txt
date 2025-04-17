@@ -1,0 +1,14 @@
+Parquet is a popular, open-source, column-oriented file format designed for efficient storage and retrieval of large datasets, especially in big data environments.  
+.GPKGs are converted to .parquets for faster opening and querying times.  Each row represents a hex with the following schema
+- h3: Hex identifier
+- population: Population count
+- density_per_mi2: Population density per square mile
+- city: City name (reverse-geocoded data)
+- county: County name
+- state: State name
+- centroid: Centroid coordinates
+- geometry: Hex geometry
+* - minsignal for broadband coverage by provider
+
+State-specific level.  
+Contact benji@andrena.com for specific parquet files
