@@ -1,0 +1,6 @@
+The GPKG files for population data are available by country at the following links (kontur):
+
+https://www.kontur.io/portfolio/population-dataset/(No difference between 35/3 or 7/1)
+https://data.humdata.org/dataset/kontur-population-united-states-of-america
+
+Contact benji@andrena.com for acutal pre-loaded parquet files -> data aggregated on broadband signals also availble 
