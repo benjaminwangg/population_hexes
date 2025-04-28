@@ -1,0 +1,6 @@
+The GPKG files for DISH Wireless and other broadband providers are available at the following links:
+By provider -> dish wireless
+https://broadbandmap.fcc.gov/data-download/data-by-provider?version=jun2023
+(No difference between 35/3 or 7/1)
+
+Contact benji@andrena.com for acutal pre-loaded parquet files
