@@ -9,7 +9,8 @@ parquet_files/
 *.prj
 DISH_gpkgs/*
 gpkgs/*
-
+tiger_shapefiles/*
+tl_2024_us_county/*
 # Python
 __pycache__/
 *.py[cod]

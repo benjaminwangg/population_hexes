@@ -5,7 +5,7 @@ import time
 start = time.time()
 id = '882a107289fffff'
 # Path to your file
-parquet_path = r"all_pa_hexes_with_signal.parquet"
+parquet_path = r"hexes_6km_radius.parquet"
 
 try:
     # Load the Parquet file
@@ -19,9 +19,13 @@ try:
     print("📦 Columns:", gdf.columns.tolist())
     print("🧭 CRS:", gdf.crs)
     print("🔍 First few rows:\n", gdf.head())
-    # total_pop = gdf["population"].sum()
-
-    # print(f"📊 Total population in high-density areas with weak signal (≤ -90 dBm): {total_pop}")
+    
+    # Calculate and print total population
+    if 'population' in gdf.columns:
+        total_pop = gdf["population"].sum()
+        print(f"👥 Total population: {total_pop:,}")
+    else:
+        print("❌ 'population' column not found in the data")
     
     # Find and print rows with lowest minsignal
     if 'avg_minsignal' in gdf.columns:

@@ -6,7 +6,7 @@ from streamlit_folium import folium_static
 # ========== LOAD DATA ==========
 @st.cache_data
 def load_data():
-    gdf = gpd.read_parquet(r"parquet_files\pa_dish_covered.parquet")
+    gdf = gpd.read_parquet(r"location_hexes\yonkers.parquet")
     gdf = gdf.set_crs("EPSG:4326")
     gdf["density_per_mi2"] = gdf["population"] / 0.2857156
     return gdf
@@ -21,7 +21,7 @@ min_density, max_density = st.sidebar.slider(
     "Population Density (people per sq. mile)",
     min_value=0,
     max_value=int(gdf["density_per_mi2"].max()),
-    value=(3000, 10000),
+    value=(0, 10000),
     step=100
 )
 
