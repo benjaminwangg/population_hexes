@@ -1,6 +1,0 @@
-fastapi
-uvicorn
-pydantic
-shapely
-geopandas
-pygeos

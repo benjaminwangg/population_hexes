@@ -5,7 +5,7 @@ import time
 start = time.time()
 id = '882a107289fffff'
 # Path to your file
-parquet_path = r"hexes_6km_radius.parquet"
+parquet_path = r"parquet_files\ng_hexes.parquet"
 
 try:
     # Load the Parquet file

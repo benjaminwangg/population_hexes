@@ -3,10 +3,10 @@ import geopandas as gpd
 import h3
 
 # Step 1: Load coverage data (hex9s with signal)
-coverage_gdf = gpd.read_parquet(r"parquet_files/PA_US_hexes.parquet")
+coverage_gdf = gpd.read_parquet(r"parquet_files/OH_US_hexes.parquet")
 
 # Step 2: Add parent hex8 ID
-coverage_gdf["h3"] = coverage_gdf["h3_res9_id"].apply(lambda h: h3.h3_to_parent(h, 8))
+coverage_gdf["h3"] = coverage_gdf["h3_res9_id"].apply(lambda h: h3.cell_to_parent(h, 8))
 
 # Step 3: Group by hex8 and average the signal
 hex8_signal = (
@@ -31,6 +31,6 @@ merged = pop_df.merge(hex8_signal, on="h3", how="inner")
 # target_areas = merged[
 #     (merged["avg_minsignal"] <= -100)
 # ]
-merged.to_parquet("all_pa_hexes_with_signal.parquet")
+merged.to_parquet("all_OH_hexes_with_signal.parquet")
 
 print(f"📊 Total population in all areas: {merged['population'].sum()}")

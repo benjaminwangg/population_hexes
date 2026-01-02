@@ -13,7 +13,7 @@ def analyze_state_coverage(hex_file, pop_df):
         state = os.path.basename(hex_file).split('_')[0]
         
         # Add parent hex8 ID
-        coverage_gdf["h3"] = coverage_gdf["h3_res9_id"].apply(lambda h: h3.h3_to_parent(h, 8))
+        coverage_gdf["h3"] = coverage_gdf["h3_res9_id"].apply(lambda h: h3.cell_to_parent(h, 8))
         
         # Group by hex8 and average the signal
         hex8_signal = (

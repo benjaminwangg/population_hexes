@@ -3,4 +3,4 @@ By provider -> dish wireless
 https://broadbandmap.fcc.gov/data-download/data-by-provider?version=jun2023
 (No difference between 35/3 or 7/1)
 
-Contact benji@andrena.com for acutal pre-loaded parquet files
+Contact benji@andrena.com for actual pre-loaded parquet files
